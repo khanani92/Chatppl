@@ -1,5 +1,7 @@
 # Chatppl
-It Hybrid Mobile Application built using Ionic Frame Work. Its a Chat application which allow user to find and add people near them using map and chat with them. 
+It Hybrid Mobile Application built using Ionic Frame Work. Its a Chat application which allow user to find and add people near them using map and chat with them.
+
+This App is calling REST API's from the [Node.js Server](https://github.com/khanani92/chatppl-server)
 
 # Features 
 - User can logined using their Facebook and Google Plus accounts.
@@ -62,6 +64,15 @@ Move to the Project Directry
 
 ```bash
 $cd projectDirectry
+```
+
+- Adding API Key (same as on Node.js Server)
+- Open file restangularConfig.js and your Key here
+```bash
+$cd www/js/config
+```
+```bash
+var auth = 'API key'; //Change the API key 
 ```
 
 - Adding Android Platform
