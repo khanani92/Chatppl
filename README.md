@@ -99,7 +99,8 @@ $ionic run android/ios
 ```bash
 $ionic build android/ios
 ```
-
+#License
+MIT
 
 
 
