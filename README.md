@@ -53,17 +53,54 @@ To install Contacts
 
 ```bash
 cordova plugin add cordova-plugin-contacts
-
-
 ```
 
 
 # Runing Application.
  
+Move to the Project Directry
 
+```bash
+$cd projectDirectry
+```
+
+- Adding Android Platform
+ 
+```bash
+$ionic platform add android
+```
+
+- Adding ios Platform
+ 
+```bash
+$ionic platform add ios
+```
 
 - Running in Browser
  
+```bash
+$ionic serve
+```
+
+- Running in emulator 
+ 
+```bash
+$ionic emulate android/ios
+```
+
+- Deploying app in mobile connected to computer via usb cable
+ 
+```bash
+$ionic run android/ios
+```
+
+- Create applcaiton file i.e .apk,etc.
+ 
+```bash
+$ionic build android/ios
+```
+
+
 
 
 
