@@ -1,0 +1,79 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="right" class="bgColor">
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Left</h1>
+        </ion-header-bar>
+        <ion-content >
+            <ion-list class="bgColor">
+                <div ng-show="HomeUser">
+                    <div class="row">
+                        <img class="circular center" src="./img/my1.jpg">
+                    </div>
+                    <div class="txt_center">
+                        <h4>Mudassir Khanani</h4>
+                    </div>
+                </div>
+                <ion-item nav-clear menu-close ui-sref="app.homeNotLog"  ng-show="notLog">
+                    HomeN
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.homeUser"  ng-show="HomeUser">
+                    HomeU
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.browse"  ng-show="HomeAdmin">
+                    HomeA
+                </ion-item>
+
+                <ion-item nav-clear menu-close ng-show="notLog">
+                    Contact US
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.friendList" ng-show="HomeUser">
+                    Friend List
+                </ion-item>
+                <ion-item nav-clear menu-close ng-show="HomeAdmin">
+                    Manage User
+                </ion-item>
+
+                <ion-item nav-clear menu-close ng-show="notLog">
+                    Help
+                </ion-item>
+                <ion-item nav-clear ui-sref="app.userMessage"  menu-close ng-show="HomeUser">
+                    Messages
+                </ion-item>
+                <ion-item nav-clear menu-close ng-show="HomeAdmin">
+                    Manage Groups
+                </ion-item>
+
+                <ion-item nav-clear ui-sref="app.userNotification" menu-close ng-show="HomeUser">
+                    Notification
+                </ion-item>
+
+                <ion-item nav-clear ui-sref="app.phoneNumber" menu-close ng-show="HomeUser">
+                    Account Settings
+                </ion-item>
+                <ion-item nav-clear menu-close ng-show="HomeAdmin">
+                    Settings
+                </ion-item>
+
+                <ion-item nav-clear menu-close ng-show="HomeUser">
+                    Log Out
+                </ion-item>
+                <ion-item nav-clear menu-close ng-show="HomeAdmin">
+                    Log Out
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

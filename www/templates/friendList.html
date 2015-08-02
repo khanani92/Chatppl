@@ -1,0 +1,84 @@
+<ion-view view-title="Friend List">
+    <ion-content class="has-footer">
+        <div class="list" ng-if="vm.isSearchBarOpen">
+            <div class="list list-inset" >
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="Search">
+                </label>
+            </div>
+        </div>
+
+        <div class="list" ng-if="!vm.isfriendList" >
+
+
+            <div>
+
+
+                <a class="item item-thumbnail-left tilesbg" href="#">
+                    <img src="./img/sp2.jpg">
+                    <h2>Pretty Hate Machine</h2>
+                    <p>Nine Inch Nails</p>
+                </a>
+
+                <a class="item item-thumbnail-left tilesbg" href="#">
+                    <img src="./img/sp1.jpg">
+                    <h2>Pretty Hate Machine</h2>
+                    <p>Nine Inch Nails</p>
+                    <img class="getRight" src="./img/onlineGreen.png">
+                </a>
+
+                <a class="item item-thumbnail-left tilesbg" href="#">
+                    <img src="./img/sp3.jpg">
+                    <h2>Pretty Hate Machine</h2>
+                    <p>Nine Inch Nails</p>
+                    <img class="getRight" src="./img/onlineGreen.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="list" ng-if="vm.isfriendList">
+
+            <a class="item item-thumbnail-left tilesbg" href="#">
+                <img src="./img/sp3.jpg">
+                <h2>Pretty Hate Machine</h2>
+                <p>Nine Inch Nails</p>
+                <div class="getRight" style="margin-top: -30px;">
+                    <button class=" button button-clear btnBg"> <i class="icon ion-android-add"></i></button>
+                    <button class=" button button-clear btnBg"><i class="icon ion-android-remove"></i></button>
+                </div>
+            </a>
+
+
+            <a class="item item-thumbnail-left tilesbg" href="#">
+
+                <img src="./img/sp1.jpg">
+                <h2>Pretty Hate Machine</h2>
+                <p>Nine Inch Nails</p>
+
+                <div class="getRight" style="margin-top: -30px;">
+                    <button class=" button button-clear btnBg"> <i class="icon ion-android-add"></i></button>
+                    <button class=" button button-clear btnBg"><i class="icon ion-android-remove"></i></button>
+                </div>
+            </a>
+
+            <a class="item item-thumbnail-left tilesbg" href="#">
+                <img src="./img/sp2.jpg">
+                <h2>Pretty Hate Machine</h2>
+                <p>Nine Inch Nails</p>
+                <div class="getRight" style="margin-top: -30px;">
+                    <button class=" button button-clear btnBg"> <i class="icon ion-android-add"></i></button>
+                    <button class=" button button-clear btnBg"><i class="icon ion-android-remove"></i></button>
+                </div>
+            </a>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer">
+        <div class="row">
+            <button  class="col button button-clear" ng-click="vm.showAddFrnd()"> <i class="icon ion-android-add"></i></button>
+            <button class="col button button-clear" ng-click="vm.showSearchBar()"><i class="icon ion-android-search"></i></button>
+            <button class="col button button-clear"><i class="ion-android-pin" style="font-size: 22px;"></i></button>
+            <button class="col button button-clear"  ng-click="vm.openPopover($event)"><i class="icon ion-android-options"></i></button>
+        </div>
+    </div>
+</ion-view>

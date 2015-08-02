@@ -1,0 +1,35 @@
+<ion-view view-title="REGISTER" class="bgColor">
+    <ion-content>
+        <form class="form-horizontal" name="registerForm" >
+
+            <div class="row rowPadding">
+                <div class="col col-33 col-offset-20"><img src="./img/logo.jpg" width="180"></div>
+            </div>
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label" >Username</span>
+                    <input type="text" name="userName" ng-model="vm.user.userName" ng-minlength="3" ng-maxlength="15" required>
+                    <span ng-show="registerForm.userName.$error.minlength" class="validationWarningText">too short.</span>
+                    <span ng-show="registerForm.userName.$error.maxlength" class="validationWarningText">too long.</span>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label" >Email</span>
+                    <input type="email" name="email" ng-model="vm.user.email" required>
+                    <span ng-show="registerForm.email.$invalid && !registerForm.email.$pristine" class="validationWarningText">Enter a valid email.</span>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label" >Password</span>
+                    <input type="password" ng-minlength="3" name="pass" ng-model="vm.user.password" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Re-Password</span>
+                    <input type="password" required name="repass" ng-model="vm.user.passwordMatch" data-match="vm.user.password" class="txtBox"/>
+                    <span data-ng-show="registerForm.repass.$error.match" class="validationWarningText">Password does not match</span>
+                </label>
+            </div>
+
+            <button class="button button-block button-positive" type="button" ng-click="vm.register()" ng-disabled="registerForm.$invalid">REGISTER </button>
+        </form>
+        <button class="button button-block button-positive" ui-sref="app.login">SignIn</button>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<ion-view view-title="Phone Number" class="bgColor">
+    <ion-content>
+        <div class="card">
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col col-50 col-offset-33 col-center">
+                        <a href="#" class="item item-icon-left" >
+                            <i class="icon ion-ios-telephone"></i>
+                            <span>Enter phone number</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="row">
+
+                        <div class="col col-50 col-offset-33 col-center" style="padding-left: 5%;">
+                            <input type="text" placeholder="+92" ng-maxlength="2" size="3" class="phoneNumberFiled" />
+                            <span style="float: left; padding-top: 5px;">&nbsp; - &nbsp;</span>
+                            <input type="text" placeholder="335-6548068" ng-maxlength="11" size="11"  class="phoneNumberFiled">
+                            <button class="button button-block button-calm" style="margin-top: 5%;">
+                                Submit
+                            </button>
+                            <button class="button button-block button-calm" style="margin-top: 5%;" ng-click="vm.exportContact()">
+                                ge Contacts
+                            </button>
+                        </div>
+
+                    </div>
+                    {{vm.phoneContacts}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

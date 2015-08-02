@@ -1,0 +1,21 @@
+<ion-view view-title="Home" class="bgColor">
+    <ion-content>
+
+
+        <div class="row rowPadding">
+            <div class="col col-33 col-offset-20"><img src="./img/logo.jpg" width="180"></div>
+        </div>
+
+        <button class="button button-block button-positive" ui-sref="app.login">Sign In </button>
+
+        <button ng-click="vm.fbLogin()" class="button button-full buttonSignInF " >
+            Sign in with Facebook
+        </button>
+        <button ng-click="vm.gplusLogin()" class="button button-full button-assertive">
+            Sign In with Google+
+        </button>
+        <button class="button button-full button-dark" ui-sref="app.register">
+        Register Now
+        </button>
+    </ion-content>
+</ion-view>

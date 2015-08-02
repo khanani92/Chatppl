@@ -1,0 +1,23 @@
+<ion-view view-title="Home User(DashBoard)" class="bgColor">
+    <ion-content>
+        <div class="card">
+            <div>
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="Search">
+                </label>
+            </div>
+            <div map-Directive height="{{ vm.mapHeigth }}" zoom = " {{ vm.zoom }}"  map-data="" ></div>
+            <!--<div style="padding-top: 1%;" id="map">-->
+            <!--</div>-->
+            <i class="fa fa-map-marker"></i>
+            <div class="list">
+                <div class="item range range-positive">
+                    <i class="icon ion-android-person"></i>
+                    <input type="range" ng-model="vm.zoom" name="zoom" min="0" max="36" value="vm.zoom">
+                    <i class="icon ion-android-people"></i>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

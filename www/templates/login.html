@@ -1,0 +1,22 @@
+<ion-view view-title="Sign IN" class="bgColor">
+    <ion-content>
+        <form class="form-horizontal"  name="loginForm" >
+            <div class="row rowPadding">
+                <div class="col col-33 col-offset-20"><img src="./img/logo.jpg" width="180"></div>
+            </div>
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label" >Username</span>
+                    <input type="text" name="userName" ng-model="vm.user.userName" ng-minlength="1" required>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" ng-minlength="1" name="pass" ng-model="vm.user.password" required>
+                </label>
+            </div>
+
+            <button class="button button-block button-positive" type="button" ng-click="vm.login()" ng-disabled="loginForm.$invalid">Sign In </button>
+        </form>
+        <button class="button button-block button-positive" ui-sref="app.register">Register Now</button>
+    </ion-content>
+</ion-view>

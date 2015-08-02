@@ -1,0 +1,123 @@
+<ion-view view-title="Message" >
+    <ion-content>
+
+        <div class="list" ng-if="isSearchBarOpen">
+
+            <div class="searchBar" >
+                <div class="list list-inset">
+                    <label class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input type="text" placeholder="Search">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="list" ng-if="false">
+            <div class="allMessages">
+                <a class="item item-avatar tilesbg" href="#">
+                    <img src="./img/sp1.jpg">
+                    <h2>Kashif Ahmed</h2>
+                    <p>Back off, man. I'm a scientist.</p>
+                </a>
+                <a class="item item-avatar tilesbg" href="#">
+                    <img src="./img/sp2.jpg">
+                    <img class="getRight" src="./img/onlineGreen.png">
+                    <h2>Juanid</h2>
+                    <p>How are you.</p>
+                    <div class="getRight" style="margin-top: -2%">
+                        <span>3:30pm</span>
+                        <span>1/4/6</span>
+                    </div>
+
+                </a>
+                <a class="item item-avatar tilesbg" href="#">
+                    <img src="./img/sp3.jpg">
+                    <h2>Asad</h2>
+                    <p>Meet you tmrow.</p>
+                </a>
+                <a class="item item-avatar tilesbg" href="#">
+                    <img src="./img/my1.jpg">
+                    <img class="getRight" src="./img/onlineGreen.png">
+                    <h2>Venkman</h2>
+                    <p> I'm a Developer.</p>
+
+
+                    <div class="getRight" style="margin-top: -2%">
+                        <span>3:30pm</span>
+
+                        <span>1/4/6</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="userChat">
+            <div class="list">
+                <div class="col">
+                    <div  class="message-wrapper"><!-- on-hold="onMessageHold($event, $index, message)"-->
+                        <div ng-if="false">
+                            <img  class="profile-pic left" src=""  />
+                            <div class="chat-bubble left">
+                                <div class="message">
+                                    Here it will be a message
+                                </div>
+                                <div class="message-detail">
+                                    <span class="bold">Junaid</span>,
+                                    <span> year ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="true">
+                            <img class="profile-pic right" src=""  />
+                            <div class="chat-bubble right">
+                                <div class="message">
+                                </div>
+                                <div class="message-detail">
+                              <span ng-click="vm.viewProfile(message)"
+                                    class="bold">user.username</span>,
+                                    <span>year go</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf"></div>
+                    </div>
+                    <div  class="message-wrapper"><!-- on-hold="onMessageHold($event, $index, message)"-->
+                        <div ng-if="true">
+                            <img  class="profile-pic left" src=""  />
+                            <div class="chat-bubble left">
+                                <div class="message">
+                                    Here it will be a message
+                                </div>
+                                <div class="message-detail">
+                                    <span class="bold">Junaid</span>,
+                                    <span> year ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-if="false">
+                            <img class="profile-pic right" src=""  />
+                            <div class="chat-bubble right">
+                                <div class="message">
+                                </div>
+                                <div class="message-detail">
+                              <span ng-click="vm.viewProfile(message)"
+                                    class="bold">user.username</span>,
+                                    <span>year go</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cf"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+    <div class="bar bar-footer">
+        <div class="row">
+
+            <button  class="col button button-clear" ng-click="vm.showSearchBar()" > <i class="icon ion-android-search"></i></button>
+            <button  class="col button button-clear"> <i class="icon ion-android-add"></i></button>
+        </div>
+    </div>
+</ion-view>
