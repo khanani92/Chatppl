@@ -111,9 +111,13 @@ $ionic run android/ios
 $ionic build android/ios
 ```
 #Screenshots of Application
-![Home Screen]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg)
-![Home Screen]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg)
-![Home Screen]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg | height = 200px )
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp16.jpg | height = 200px)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp15.jpg | height = 200px)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp14.jpg | height = 200px)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp13.jpg | height = 200px)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp12.jpg | height = 200px)
+
 
 
 #License
