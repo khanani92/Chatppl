@@ -15,7 +15,6 @@
     /* @ngInject */
     function configuration(RestangularProvider){
         var url = "http://localhost:8080";
-        //var url = "https://cpback.herokuapp.com";
         var baseUrl = url + '/api'
         RestangularProvider.setBaseUrl(baseUrl);
         RestangularProvider.setResponseExtractor(function(response, operation){
@@ -34,7 +33,7 @@
     function interceptor(Restangular, lodash){
         Restangular.setFullRequestInterceptor(function(element, operation, route, url, headers){
             var userId = localStorage.getItem('userId');
-            var auth = 'pDblTMZaFam59d@F9c#V1G9UEL17)Odz';
+            var auth = 'Your API key';
             return {
                 headers: lodash.extend(headers, {'apikey': auth})
             };

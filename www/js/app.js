@@ -9,7 +9,6 @@ angular.module('chatppl', ['ionic','sidebar.services','leaflet-directive','btfor
 
     .run(['$ionicPlatform','socketServices','mapServices',function($ionicPlatform,socketServices,mapServices) {
         var url = "http://localhost:8080";
-        //var url = "https://cpback.herokuapp.com";
         socketServices.socketConnect(url);
         mapServices.initialize();
         $ionicPlatform.ready(function() {
