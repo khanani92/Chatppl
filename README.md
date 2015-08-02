@@ -111,7 +111,10 @@ $ionic run android/ios
 $ionic build android/ios
 ```
 #Screenshots of Application
-[[ https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg | height = 300px ]]
+![Home Screen]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg)
+![Home Screen]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg)
+![Home Screen]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg)
+
 
 #License
 MIT
