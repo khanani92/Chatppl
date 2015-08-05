@@ -110,6 +110,16 @@ $ionic run android/ios
 ```bash
 $ionic build android/ios
 ```
+#Screenshots of Application
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp17.jpg)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp16.jpg)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp15.jpg)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp14.jpg)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp13.jpg)
+![]( https://github.com/khanani92/Chatppl/blob/master/www/img/screenshot/sp12.jpg)
+
+
+
 #License
 MIT
 
