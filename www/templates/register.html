@@ -3,12 +3,12 @@
         <form class="form-horizontal" name="registerForm" >
 
             <div class="row rowPadding">
-                <div class="col col-33 col-offset-20"><img src="./img/logo.jpg" width="180"></div>
+                <div class="col col-33 col-offset-50"><img src="./img/logo.png" width="180"></div>
             </div>
             <div class="list">
                 <label class="item item-input">
                     <span class="input-label" >Username</span>
-                    <input type="text" name="userName" ng-model="vm.user.userName" ng-minlength="3" ng-maxlength="15" required>
+                    <input type="text" name="userName" ng-model="vm.user.user_name" ng-minlength="3" ng-maxlength="15" required>
                     <span ng-show="registerForm.userName.$error.minlength" class="validationWarningText">too short.</span>
                     <span ng-show="registerForm.userName.$error.maxlength" class="validationWarningText">too long.</span>
                 </label>

@@ -26,12 +26,11 @@
         }
 
         function loginUser(userData){
-            console.log(userData)
+            return Restangular.all('login').post({userData : userData});
         }
 
         function socialLogin(userData){
-            console.log(userData)
-
+            return Restangular.all('socialLogin').post({userData : userData});
         }
 
     }

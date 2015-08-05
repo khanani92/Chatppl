@@ -19,7 +19,7 @@
 
             mapServices.getUserCurrentLocation(function(res){
                 vm.user.location = res;
-                $q.when(userServices.loginUser(vm.user)).then(function(res){
+                $q.when(userServices.login(vm.user)).then(function(res){
                     console.log(res)
                 })
 
@@ -30,9 +30,9 @@
 
             mapServices.getUserCurrentLocation(function(res){
                 vm.user.location = res;
-                userServices.registerUser(vm.user).then(function(res){
-
-                    });
+                userServices.register(vm.user).then(function(res){
+                    console.log(res);
+                });
             })
         }
 

@@ -10,33 +10,37 @@
 
 
         var service = {
-            registerUser: registerUser,
-            loginUser: loginUser,
-            loginFb: loginFb,
-            logingplus: logingplus
+            register: register,
+            login: login,
+            Fb: Fb,
+            gplus: gplus
         };
         return service;
 
         /////////
 
-        function registerUser(userData){
+        function register(userData){
             dataServices.registerUser(userData).then(function(res){
               return res;
+            });
+        }
+
+        function login(userData){
+            dataServices.loginUser(userData).then(function(res){
+                return res;
             })
-
         }
 
-        function loginUser(userData){
-            console.log(userData)
+        function Fb(userData){
+            dataServices.socialLogin(userData).then(function(res){
+                return res;
+            });
         }
 
-        function loginFb(userData){
-            console.log(userData)
-            
-        }
-
-        function logingplus(userData){
-            console.log(userData)
+        function gplus(userData){
+            dataServices.socialLogin(userData).then(function(res){
+                return res;
+            })
 
         }
     }

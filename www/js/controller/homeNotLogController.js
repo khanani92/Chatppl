@@ -17,11 +17,12 @@
                 $http.get("https://graph.facebook.com/v2.2/me", { params: { access_token: result.access_token, fields: "id,name,gender,location,website,picture,email,relationship_status" }}).then(function(result) {
                     var userBreak = (result.data.name).split(" ");
                     var user = {}
-                    user.firstName = userBreak[0];
-                    user.lastName = userBreak[1];
+                    user.first_name = userBreak[0];
+                    user.last_name = userBreak[1];
                     user.email = result.data.email;
-                    user.fbID = result.data.id;
+                    user.fb_id = result.data.id;
                     user.profilePic = result.data.picture.data.url;
+                    user.key = 'fb';
                     if(result.data.gender) {
                         result.data.gender.toLowerCase() === 'male' ? user.gender = 'M' : user.gender = 'F';
                     } else {
@@ -29,7 +30,7 @@
                     }
                     mapServices.getUserCurrentLocation(function(res){
                         user.location = res
-                        userServices.loginFb(user)
+                        userServices.Fb(user)
                             .then(function(res){
 
                             });
@@ -56,10 +57,11 @@
                 }).then(function(result) {
                     var userBreak = (result.data.displayName).split(" ");
                     var user = {}
-                    user.firstName = userBreak[0];
-                    user.lastName = userBreak[1];
+                    user.first_name = userBreak[0];
+                    user.last_name = userBreak[1];
                     user.email = result.data.emails[0].value;
-                    user.gplusID = result.data.id;
+                    user.gplus_id = result.data.id;
+                    user.key = 'g+';
                     user.profilePic = result.data.image.url;
                     if(result.data.gender) {
                         result.data.gender.toLowerCase() === 'male' ? user.gender = 'M' : user.gender = 'F';
@@ -69,7 +71,7 @@
 
                     mapServices.getUserCurrentLocation(function(res){
                         user.location = res
-                        userServices.logingplus(user)
+                        userServices.gplus(user)
                             .then(function(res){
 
                             });
