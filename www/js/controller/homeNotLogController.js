@@ -30,10 +30,14 @@
                     }
                     mapServices.getUserCurrentLocation(function(res){
                         user.location = res
-                        userServices.Fb(user)
-                            .then(function(res){
-
+                        userServices.Fb(user, function(res){
+                            httpErrorServices.checkResponse(res.status,res.message,function(respose){
+                                if(respose === true){
+                                    $state.go('app.homeUser');
+                                    sidebar.getnav('U')
+                                }
                             });
+                        });
                     })
                 }, function(error) {
                     alert("There was a problem getting your profile.  Check the logs for details.");
@@ -71,10 +75,15 @@
 
                     mapServices.getUserCurrentLocation(function(res){
                         user.location = res
-                        userServices.gplus(user)
-                            .then(function(res){
+                        userServices.gplus(user,function(res){
+                            httpErrorServices.checkResponse(res.status,res.message,function(respose){
+                                if(respose === true){
+                                    $state.go('app.homeUser');
+                                    sidebar.getnav('U')
+                                }
 
                             });
+                        });
                     })
                 }, function(error) {
                     alert("There was a problem getting your profile.  Check the logs for details.");

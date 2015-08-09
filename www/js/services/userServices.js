@@ -19,27 +19,27 @@
 
         /////////
 
-        function register(userData){
+        function register(userData,callback){
             dataServices.registerUser(userData).then(function(res){
-              return res;
+                callback(res);
             });
         }
 
-        function login(userData){
+        function login(userData,callback){
             dataServices.loginUser(userData).then(function(res){
-                return res;
+                callback(res);
             })
         }
 
-        function Fb(userData){
+        function Fb(userData,callback){
             dataServices.socialLogin(userData).then(function(res){
-                return res;
+                callback(res);
             });
         }
 
-        function gplus(userData){
+        function gplus(userData,callback){
             dataServices.socialLogin(userData).then(function(res){
-                return res;
+                callback(res);
             })
 
         }

@@ -6,6 +6,6 @@
 
     function menuCtrl($scope, $state,$rootScope,sidebar){
         var vm = this;
-        sidebar.getnav('U')
+        sidebar.getnav('')
     }
 })();
