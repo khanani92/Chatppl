@@ -15,6 +15,7 @@ This App is calling REST API's from the [Node.js Server](https://github.com/khan
 - In-app browser 
 - GeoLocation (used to get and watch user location)
 - Contacts (used to get users contacts info)
+- Toast message (used to show user messages)
 
 # Development Environment Setup
 
@@ -55,6 +56,12 @@ To install Contacts
 
 ```bash
 cordova plugin add cordova-plugin-contacts
+```
+
+To install Toast 
+
+```bash
+cordova plugin add https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git
 ```
 
 
