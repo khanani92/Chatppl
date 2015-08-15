@@ -4,7 +4,7 @@
     angular.module('chatppl')
         .controller('homeNotLogCtrl',homeNotLogCtrl);
 
-    function homeNotLogCtrl($scope, $state, $rootScope, userServices, mapServices, $cordovaOauth, $http){
+    function homeNotLogCtrl($scope, $state, $rootScope, userServices, mapServices, $cordovaOauth, $http, httpRequestServices){
         var vm = this;
         vm.user = {};
         vm.log = ''
@@ -21,7 +21,7 @@
                     user.last_name = userBreak[1];
                     user.email = result.data.email;
                     user.fb_id = result.data.id;
-                    user.profilePic = result.data.picture.data.url;
+                    user.profile_pic = result.data.picture.data.url;
                     user.key = 'fb';
                     if(result.data.gender) {
                         result.data.gender.toLowerCase() === 'male' ? user.gender = 'M' : user.gender = 'F';
@@ -31,7 +31,7 @@
                     mapServices.getUserCurrentLocation(function(res){
                         user.location = res
                         userServices.Fb(user, function(res){
-                            httpErrorServices.checkResponse(res.status,res.message,function(respose){
+                            httpRequestServices.checkResponse(res.status,res.message,function(respose){
                                 if(respose === true){
                                     $state.go('app.homeUser');
                                     sidebar.getnav('U')
@@ -66,7 +66,7 @@
                     user.email = result.data.emails[0].value;
                     user.gplus_id = result.data.id;
                     user.key = 'g+';
-                    user.profilePic = result.data.image.url;
+                    user.profile_pic = result.data.image.url;
                     if(result.data.gender) {
                         result.data.gender.toLowerCase() === 'male' ? user.gender = 'M' : user.gender = 'F';
                     } else {
@@ -76,7 +76,7 @@
                     mapServices.getUserCurrentLocation(function(res){
                         user.location = res
                         userServices.gplus(user,function(res){
-                            httpErrorServices.checkResponse(res.status,res.message,function(respose){
+                            httpRequestServices.checkResponse(res.status,res.message,function(respose){
                                 if(respose === true){
                                     $state.go('app.homeUser');
                                     sidebar.getnav('U')

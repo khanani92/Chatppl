@@ -4,7 +4,7 @@
     angular.module('chatppl')
         .controller('LoginCtrl',LoginCtrl);
 
-    function LoginCtrl($state,mapServices, userServices,$cordovaContacts, httpErrorServices, sidebar){
+    function LoginCtrl($state,mapServices, userServices,$cordovaContacts, httpRequestServices, sidebar){
         var vm = this;
         vm.phoneContacts = [];
 
@@ -20,7 +20,7 @@
             mapServices.getUserCurrentLocation(function(res){
                 vm.user.location = res;
                 userServices.login(vm.user,function(res){
-                    httpErrorServices.checkResponse(res.status,res.message,function(respose){
+                    httpRequestServices.checkResponse(res.status,res.message,function(respose){
                         if(respose === true){
                             $state.go('app.homeUser');
                             sidebar.getnav('U')
@@ -36,7 +36,7 @@
             mapServices.getUserCurrentLocation(function(res){
                 vm.user.location = res;
                 userServices.register(vm.user,function(res){
-                    httpErrorServices.checkResponse(res.status,res.message,function(respose){
+                    httpRequestServices.checkResponse(res.status,res.message,function(respose){
                         if(respose === true){
                             $state.go('app.login')
                         }

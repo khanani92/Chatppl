@@ -4,10 +4,10 @@
 (function() {
     'use strict';
     angular.module('chatppl')
-        .factory('httpErrorServices', httpErrorServices);
+        .factory('httpRequestServices', httpRequestServices);
 
 
-    function httpErrorServices($rootScope,$cordovaToast){
+    function httpRequestServices($rootScope,$cordovaToast){
 
         var service = {
             checkResponse: checkResponse
